@@ -1,0 +1,62 @@
+
+Problems on trees (bst = binary search tree, h = height of tree):
+
+Standard:
+
+S1. Print the nodes of a binary tree in pre/in/post/level orders.
+
+S2. Find the binary tree given its inorder and postorder traversals.
+    Assume that there are no duplicate elements.
+	BinaryTree<T> reconstruct(T[] inOrder, T[] postOrder) { ... }
+
+S3. Find the kth smallest element of a bst, using only O(h) extra space.
+	T select(BST<T> tree, int k) { ... }
+
+S4. Given a bst and x, find a node in the bst that is closest to x.
+	int closest(BST<Integer> tree, Integer x) { ... }
+
+S5. Given a sorted array of elements, build a height-balanced bst with its elements.
+	BST<T> arrayToBST(T[] arr) { ... }
+
+S6. Is a given binary tree a bst?
+	boolean isBST(BinaryTree<T> tree) { ... }
+
+S7. Does a given bst satisfy the structural constraints of an AVL tree?
+	boolean isAVLbalanced(BST<T> tree) { ... }
+
+S8. Verify the validity of a given AVL tree:
+	boolean verify(AVLTree<T> tree) { ... }
+
+S9. Verify the validity of a given Red-Black tree:
+	boolean verify(RedBlackTree<T> tree) { ... }
+
+
+Advanced (these problems are too hard for exams):
+
+A1. Given a binary tree, find largest subtree that is a bst.
+	Entry<T> largestBST(BinaryTree<T> tree) { ... }
+
+A2. Given two bsts, compute a balanced bst that has the union of all the
+    elements in the two trees, using only O(h1+h2) extra space and linear time.
+	void merge(BST<T> other) { /* merge into this BST the elements of the other BST */ }
+
+A3. Given a binary tree, find the least common ancestor of 2 of its nodes.
+    Assume that each node has a pointer to its parent node.
+    Challenge: find an algorithm with running time proportional to
+    the distance between the two nodes.
+	Entry<T> lca(Entry<T> a, Entry<T> b) { ... }
+
+
+Challenge (these problems are too hard for exams):
+
+C1. Given a binary tree, find largest induced subgraph that is a bst.
+
+C2. Given a bst, convert it into a sorted doubly linked list (left=prev, right=next).
+
+C3. Inverse of C2.  Sorted list to bst.
+
+C4. Given the preorder traversal of a bst, construct it in linear time.
+	BST<T> reconstruct(T[] preOrder) { ... }
+
+C5. Challenge problem on lists: Given a singly linked list, check if it is
+    a palindrome, using only O(1) extra space.
